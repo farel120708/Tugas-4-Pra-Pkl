@@ -1,224 +1,986 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Layanan Digital Desa Bangsalsari</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <title>
+        Layanan Digital Desa Bangsalsari
+    </title>
+
+
+    <style>
+
+        /* ================================
+           RESET
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ================================
+           BODY
+        ================================= */
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #075985,
+                    #0f766e
+                );
+
+            min-height:
+                100vh;
+
+            color:
+                #ffffff;
+
+        }
+
+
+        /* ================================
+           CONTAINER
+        ================================= */
+
+        .container {
+
+            width:
+                100%;
+
+            max-width:
+                650px;
+
+            margin:
+                auto;
+
+            padding:
+                25px 18px 35px;
+
+        }
+
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        .header {
+
+            text-align:
+                center;
+
+            padding:
+                20px 10px 30px;
+
+        }
+
+
+        /* ================================
+           LOGO
+        ================================= */
+
+        .logo {
+
+            width:
+                90px;
+
+            height:
+                90px;
+
+            margin:
+                0 auto 18px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            background:
+                rgba(255,255,255,0.95);
+
+            border-radius:
+                50%;
+
+            font-size:
+                45px;
+
+            box-shadow:
+                0 8px 20px
+                rgba(0,0,0,0.20);
+
+        }
+
+
+        /* ================================
+           JUDUL
+        ================================= */
+
+        .header h1 {
+
+            font-size:
+                30px;
+
+            line-height:
+                1.25;
+
+            letter-spacing:
+                1px;
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        .header h2 {
+
+            font-size:
+                14px;
+
+            letter-spacing:
+                2px;
+
+            font-weight:
+                normal;
+
+        }
+
+
+        .garis {
+
+            width:
+                80px;
+
+            height:
+                3px;
+
+            margin:
+                18px auto;
+
+            background:
+                #ffffff;
+
+            border-radius:
+                10px;
+
+        }
+
+
+        .header h3 {
+
+            font-size:
+                12px;
+
+            letter-spacing:
+                1px;
+
+        }
+
+
+        .motto {
+
+            margin-top:
+                12px;
+
+            font-size:
+                12px;
+
+            font-style:
+                italic;
+
+            opacity:
+                0.9;
+
+        }
+
+
+        /* ================================
+           SECTION
+        ================================= */
+
+        section {
+
+            background:
+                rgba(255,255,255,0.96);
+
+            padding:
+                22px;
+
+            margin-bottom:
+                20px;
+
+            border-radius:
+                20px;
+
+            box-shadow:
+                0 10px 25px
+                rgba(0,0,0,0.15);
+
+        }
+
+
+        /* ================================
+           JUDUL SECTION
+        ================================= */
+
+        section h4,
+        .kotak h4 {
+
+            text-align:
+                center;
+
+            color:
+                #075985;
+
+            font-size:
+                16px;
+
+            margin-bottom:
+                17px;
+
+            letter-spacing:
+                1px;
+
+        }
+
+
+        /* ================================
+           TOMBOL
+        ================================= */
+
+        .tombol {
+
+            width:
+                100%;
+
+            min-height:
+                58px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            padding:
+                13px 17px;
+
+            margin:
+                10px 0;
+
+            border-radius:
+                50px;
+
+            text-decoration:
+                none;
+
+            color:
+                white;
+
+            transition:
+                0.25s ease;
+
+            box-shadow:
+                0 5px 12px
+                rgba(0,0,0,0.12);
+
+        }
+
+
+        /* ================================
+           WARNA TOMBOL
+        ================================= */
+
+        .biru {
+
+            background:
+                #0284c7;
+
+        }
+
+
+        .ungu {
+
+            background:
+                #7c3aed;
+
+        }
+
+
+        .hitam {
+
+            background:
+                #334155;
+
+        }
+
+
+        /* ================================
+           ICON
+        ================================= */
+
+        .icon {
+
+            width:
+                38px;
+
+            height:
+                38px;
+
+            min-width:
+                38px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            background:
+                rgba(255,255,255,0.18);
+
+            border-radius:
+                50%;
+
+            font-size:
+                19px;
+
+        }
+
+
+        /* ================================
+           TULISAN TOMBOL
+        ================================= */
+
+        .tombol strong {
+
+            flex:
+                1;
+
+            font-size:
+                14px;
+
+        }
+
+
+        /* ================================
+           PANAH
+        ================================= */
+
+        .panah {
+
+            font-size:
+                22px;
+
+            font-weight:
+                bold;
+
+        }
+
+
+        /* ================================
+           HOVER
+        ================================= */
+
+        .tombol:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 8px 18px
+                rgba(0,0,0,0.25);
+
+        }
+
+
+        /* ================================
+           KOTAK INFORMASI
+        ================================= */
+
+        .kotak {
+
+            background:
+                rgba(255,255,255,0.96);
+
+            color:
+                #334155;
+
+            padding:
+                22px;
+
+            margin-bottom:
+                20px;
+
+            border-radius:
+                20px;
+
+            box-shadow:
+                0 10px 25px
+                rgba(0,0,0,0.15);
+
+        }
+
+
+        .kotak p {
+
+            font-size:
+                13px;
+
+            line-height:
+                1.7;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+
+            text-align:
+                center;
+
+            padding:
+                25px 10px;
+
+        }
+
+
+        .footer-logo {
+
+            font-size:
+                30px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        footer strong {
+
+            font-size:
+                15px;
+
+        }
+
+
+        footer p {
+
+            font-size:
+                12px;
+
+            margin:
+                5px 0 10px;
+
+            opacity:
+                0.85;
+
+        }
+
+
+        footer small {
+
+            font-size:
+                11px;
+
+            opacity:
+                0.7;
+
+        }
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 500px) {
+
+            .container {
+
+                padding:
+                    15px 12px 25px;
+
+            }
+
+
+            .header h1 {
+
+                font-size:
+                    25px;
+
+            }
+
+
+            .header h2 {
+
+                font-size:
+                    12px;
+
+            }
+
+
+            .header h3 {
+
+                font-size:
+                    10px;
+
+            }
+
+
+            section {
+
+                padding:
+                    18px;
+
+            }
+
+
+            .tombol {
+
+                min-height:
+                    55px;
+
+                padding:
+                    11px 14px;
+
+            }
+
+
+            .tombol strong {
+
+                font-size:
+                    13px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <div class="container">
 
-        <!-- ================= HEADER ================= -->
-
-        <header class="header">
-
-            <div class="logo">
-                🏛️
-            </div>
-
-            <h1>
-                LAYANAN DIGITAL<br>
-                DESA BANGSALSARI
-            </h1>
-
-            <h2>
-                PEMERINTAH DESA BANGSALSARI
-            </h2>
-
-            <div class="garis"></div>
-
-            <h3>
-                == LAYANAN INFORMASI & ADMINISTRASI ==
-            </h3>
-
-            <p class="motto">
-                "MELAYANI MASYARAKAT DENGAN MUDAH DAN CEPAT"
-            </p>
-
-        </header>
+<div class="container">
 
 
-        <!-- ================= PELAYANAN SURAT DESA ================= -->
+    <!-- ================= HEADER ================= -->
 
-        <section>
-
-            <h4>
-                PELAYANAN SURAT DESA
-            </h4>
+    <header class="header">
 
 
-            <!-- FORM SURAT -->
-
-            <a
-                href="https://s.id/form-surat-bangsalsari"
-                target="_blank"
-                class="tombol biru"
-            >
-
-                <span class="icon">
-                    📄
-                </span>
-
-                <strong>
-                    Pengajuan Surat Desa
-                </strong>
-
-            </a>
-
-
-            <!-- REKAP SURAT -->
-
-            <a
-                href="https://s.id/rekap-surat-bangsalsari"
-                target="_blank"
-                class="tombol ungu"
-            >
-
-                <span class="icon">
-                    📊
-                </span>
-
-                <strong>
-                    Rekap Data Surat
-                </strong>
-
-            </a>
-
-        </section>
-
-
-        <!-- ================= INFORMASI DESA ================= -->
-
-        <section>
-
-            <h4>
-                INFORMASI DESA
-            </h4>
-
-
-            <!-- INFORMASI -->
-
-            <a
-                href="#informasi"
-                class="tombol hitam"
-            >
-
-                <span class="icon">
-                    ℹ️
-                </span>
-
-                <strong>
-                    Informasi Pelayanan
-                </strong>
-
-            </a>
-
-
-            <!-- KONTAK -->
-
-            <a
-                href="#kontak"
-                class="tombol hitam"
-            >
-
-                <span class="icon">
-                    📞
-                </span>
-
-                <strong>
-                    Kontak Balai Desa Bangsalsari
-                </strong>
-
-            </a>
-
-        </section>
-
-
-        <!-- ================= INFORMASI ================= -->
-
-        <div
-            id="informasi"
-            class="kotak"
-        >
-
-            <h4>
-                INFORMASI PELAYANAN
-            </h4>
-
-            <p>
-                Selamat datang di Portal Layanan Digital
-                Desa Bangsalsari.
-            </p>
-
-            <p>
-                Silakan pilih layanan surat yang tersedia
-                sesuai dengan kebutuhan Anda.
-            </p>
-
-            <p>
-                Pastikan data yang diisi benar dan lengkap
-                agar proses pelayanan dapat berjalan dengan
-                baik.
-            </p>
-
+        <div class="logo">
+            🏛️
         </div>
 
 
-        <!-- ================= KONTAK ================= -->
+        <h1>
 
-        <div
-            id="kontak"
-            class="kotak"
+            LAYANAN DIGITAL<br>
+
+            DESA BANGSALSARI
+
+        </h1>
+
+
+        <h2>
+
+            PEMERINTAH DESA BANGSALSARI
+
+        </h2>
+
+
+        <div class="garis"></div>
+
+
+        <h3>
+
+            == LAYANAN INFORMASI & ADMINISTRASI ==
+
+        </h3>
+
+
+        <p class="motto">
+
+            "MELAYANI MASYARAKAT DENGAN MUDAH DAN CEPAT"
+
+        </p>
+
+
+    </header>
+
+
+
+    <!-- ================= PELAYANAN SURAT ================= -->
+
+    <section>
+
+
+        <h4>
+
+            PELAYANAN SURAT DESA
+
+        </h4>
+
+
+
+        <!-- SURAT DOMISILI -->
+
+        <a
+
+            href="LINK_FORM_DOMISILI"
+
+            target="_blank"
+
+            class="tombol biru"
+
         >
 
-            <h4>
-                KONTAK BALAI DESA
-            </h4>
+            <span class="icon">
 
-            <p>
-                🏛️ Balai Desa Bangsalsari
-            </p>
+                📄
 
-            <p>
-                📍 Bangsalsari, Jember
-            </p>
+            </span>
 
-            <p>
-                📞 Hubungi Balai Desa Bangsalsari
-                melalui kontak resmi desa.
-            </p>
-
-        </div>
-
-
-        <!-- ================= FOOTER ================= -->
-
-        <footer>
-
-            <div class="footer-logo">
-                🏛️
-            </div>
 
             <strong>
-                DESA BANGSALSARI
+
+                Surat Keterangan Domisili
+
             </strong>
 
-            <p>
-                Portal Layanan Digital Desa
-            </p>
 
-            <small>
-                © 2026 • Tugas PRA-PKL RPL/PPLG
-            </small>
+            <span class="panah">
 
-        </footer>
+                →
+
+            </span>
+
+        </a>
+
+
+
+        <!-- SURAT USAHA -->
+
+        <a
+
+            href="LINK_FORM_USAHA"
+
+            target="_blank"
+
+            class="tombol ungu"
+
+        >
+
+            <span class="icon">
+
+                📝
+
+            </span>
+
+
+            <strong>
+
+                Surat Keterangan Usaha
+
+            </strong>
+
+
+            <span class="panah">
+
+                →
+
+            </span>
+
+        </a>
+
+
+
+        <!-- SURAT PENGANTAR -->
+
+        <a
+
+            href="LINK_FORM_PENGANTAR"
+
+            target="_blank"
+
+            class="tombol biru"
+
+        >
+
+            <span class="icon">
+
+                📋
+
+            </span>
+
+
+            <strong>
+
+                Surat Pengantar
+
+            </strong>
+
+
+            <span class="panah">
+
+                →
+
+            </span>
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- ================= INFORMASI DESA ================= -->
+
+    <section>
+
+
+        <h4>
+
+            INFORMASI DESA
+
+        </h4>
+
+
+
+        <!-- INFORMASI -->
+
+        <a
+
+            href="#informasi"
+
+            class="tombol hitam"
+
+        >
+
+            <span class="icon">
+
+                ℹ️
+
+            </span>
+
+
+            <strong>
+
+                Informasi Pelayanan
+
+            </strong>
+
+
+            <span class="panah">
+
+                ↓
+
+            </span>
+
+        </a>
+
+
+
+        <!-- KONTAK -->
+
+        <a
+
+            href="#kontak"
+
+            class="tombol hitam"
+
+        >
+
+            <span class="icon">
+
+                📞
+
+            </span>
+
+
+            <strong>
+
+                Kontak Balai Desa Bangsalsari
+
+            </strong>
+
+
+            <span class="panah">
+
+                ↓
+
+            </span>
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- ================= INFORMASI ================= -->
+
+    <div
+
+        id="informasi"
+
+        class="kotak"
+
+    >
+
+
+        <h4>
+
+            INFORMASI PELAYANAN
+
+        </h4>
+
+
+        <p>
+
+            Selamat datang di Portal Layanan Digital
+            Desa Bangsalsari.
+
+        </p>
+
+
+        <p>
+
+            Silakan pilih jenis surat yang sesuai
+            dengan kebutuhan Anda.
+
+        </p>
+
+
+        <p>
+
+            Pastikan data yang diisi benar dan lengkap
+            agar proses pelayanan dapat berjalan dengan
+            baik.
+
+        </p>
+
 
     </div>
 
+
+
+    <!-- ================= KONTAK ================= -->
+
+    <div
+
+        id="kontak"
+
+        class="kotak"
+
+    >
+
+
+        <h4>
+
+            KONTAK BALAI DESA
+
+        </h4>
+
+
+        <p>
+
+            🏛️ Balai Desa Bangsalsari
+
+        </p>
+
+
+        <p>
+
+            📍 Bangsalsari, Jember
+
+        </p>
+
+
+        <p>
+
+            📞 Hubungi Balai Desa Bangsalsari
+            melalui kontak resmi desa.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            🏛️
+
+        </div>
+
+
+        <strong>
+
+            DESA BANGSALSARI
+
+        </strong>
+
+
+        <p>
+
+            Portal Layanan Digital Desa
+
+        </p>
+
+
+        <small>
+
+            © 2026 • Tugas PRA-PKL RPL/PPLG
+
+        </small>
+
+
+    </footer>
+
+
+</div>
+
+
 </body>
+
 </html>
